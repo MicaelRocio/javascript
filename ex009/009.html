@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificação de Nacionalidade</title>
+  <script>
+    function verificarNacionalidade() {
+      var pais = prompt("Digite o seu país:");
+
+      if (pais.toLowerCase() === "brasil") {
+        alert("Você é brasileiro(a)!");
+      } else {
+        alert("Você é estrangeiro(a)!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="verificarNacionalidade()">Verificar Nacionalidade</button>
+</body>
+</html>
