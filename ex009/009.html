@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Verificação de Nacionalidade</title>
-  <script>
-    function verificarNacionalidade() {
-      var pais = prompt("Digite o seu país:");
-
-      if (pais.toLowerCase() === "brasil") {
-        alert("Você é brasileiro(a)!");
-      } else {
-        alert("Você é estrangeiro(a)!");
-      }
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
 </head>
 <body>
-  <button onclick="verificarNacionalidade()">Verificar Nacionalidade</button>
+    <h1>Digite seu país de origem:</h1>
+    <input type="text" name="ntxt" id="ntxt">
+    <input type="button" value="Verificar" onclick="verificarNacionalidade()">
+    <div id="res"></div>
+    <script>
+        function verificarNacionalidade() {
+            var pais = window.document.querySelector('input#ntxt').value;
+            var resultadoDiv = window.document.querySelector('#res');
+            resultadoDiv.innerHTML = '';
+            
+            if (pais.toLowerCase() === "brasil") {
+                resultadoDiv.innerHTML = "<p>Você é Brasileiro(a)!</p>";
+                console.log("Você é Brasileiro!");
+            } else {
+                resultadoDiv.innerHTML = "<p>Você é Estrangeiro(a)!</p>";
+                console.log("Você é Estrangeiro!");
+            }
+
+            resultadoDiv.innerHTML += `<p>Seu país de origem é ${pais}.</p>`
+        }
+    </script>
 </body>
 </html>
