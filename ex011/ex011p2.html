@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="Verificar" onclick="Verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function Verificar() {
+            var agora = new Date();
+            var dia = agora.getDay();
+            var hora = agora.getHours();
+            var min = agora.getMinutes();
+            var seg = agora.getSeconds();
+            var res = window.document.querySelector('div#res');
+            res.innerHTML = `<p>A hora atual é: <strong>${hora}</strong>:<strong>${min}</strong>:<strong>${seg}</strong></p>`;
+
+            if (hora < 12) {
+                res.innerHTML += "<p>Bom Dia!</p>";
+            } else if (hora < 18) {
+                res.innerHTML += "<p>Boa Tarde!</p>";
+            } else {
+                res.innerHTML += "<p>Boa Noite!</p>";
+            }
+
+            switch (dia) {
+                case 0:
+                    res.innerHTML += "<p>Domingo</p>";
+                    break;
+                case 1:
+                    res.innerHTML += "<p>Segunda-feira</p>";
+                    break;
+                case 2:
+                    res.innerHTML += "<p>Terça-feira</p>";
+                    break;
+                case 3:
+                    res.innerHTML += "<p>Quarta-feira</p>";
+                    break;
+                case 4:
+                    res.innerHTML += "<p>Quinta-feira</p>";
+                    break;
+                case 5:
+                    res.innerHTML += "<p>Sexta-feira</p>";
+                    break;
+                case 6:
+                    res.innerHTML += "<p>Sábado</p>";
+                    break;
+                default:
+                    res.innerHTML += "<p>[ERRO] Dia inválido!</p>";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
