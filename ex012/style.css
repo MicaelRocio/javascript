@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+    --fonte1: 'Lobster', cursive;
+}
+
 body {
     font: normal 15pt Times;
     background-color: lightblue;
@@ -21,4 +27,18 @@ footer {
     color: white;
     text-align: center;
     font-style: italic;
+}
+
+div#horario {
+    text-align: center;
+    font-family: var(--fonte1);
+}
+
+div#msg {
+    text-align: center;
+    font-family: var(--fonte1);
+}
+
+div#foto {
+    text-align: center;
 }
