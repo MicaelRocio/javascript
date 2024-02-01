@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Site</title>
+  <style>
+    /* Estilo inicial do título */
+    #titulo {
+      color: yellow;
+    }
+
+    /* Estilo da animação */
+    @keyframes changeColor {
+      0%, 70% { color: yellow; }
+      50%, 100% { color: #666600; }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Título da Minha Página</h1>
+
+  <script>
+    // Função para aplicar a animação no título
+    function applyColorAnimation() {
+      const titulo = document.getElementById('titulo');
+      titulo.style.animation = 'changeColor 2s 1'; // A animação dura 2 segundos e é executada apenas uma vez
+      setTimeout(() => {
+        titulo.style.color = 'yellow'; // Aplica a cor amarela permanentemente após a animação
+      }, 2000); // Aguarda 2 segundos (mesma duração da animação) antes de mudar a cor permanentemente
+    }
+
+    // Chamada da função quando a página é carregada
+    window.addEventListener('load', applyColorAnimation);
+  </script>
+</body>
+</html>

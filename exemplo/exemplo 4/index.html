@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Site</title>
+  <style>
+    /* Estilo inicial do título */
+    #titulo {
+      color: yellow;
+    }
+
+    /* Estilo da animação */
+    @keyframes changeColor {
+      0% { color: yellow; }
+      50% { color: #666600; } /* Amarelo escuro */
+      100% { color: yellow; }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Título da Minha Página</h1>
+
+  <script>
+    // Função para aplicar a animação no título
+    function applyColorAnimation() {
+      const titulo = document.getElementById('titulo');
+      titulo.style.animation = 'changeColor 2s infinite'; // A animação dura 2 segundos e se repete infinitamente
+    }
+
+    // Chamada da função quando a página é carregada
+    window.addEventListener('load', applyColorAnimation);
+  </script>
+</body>
+</html>

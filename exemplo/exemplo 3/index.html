@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Site com Efeito de Letreiro Antigo</title>
+  <style>
+    body {
+      font-size: 24px;
+      text-align: center;
+    }
+    .blinking {
+      animation: blink-animation 0.7s steps(1, start) infinite;
+    }
+    
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="changingText">Bem-vindo ao meu site!</h1>
+
+  <script src="seu_arquivo_js.js"></script>
+</body>
+</html>
